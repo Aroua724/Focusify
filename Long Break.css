@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(4, 97, 24);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+
+.glass-card {
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 50px 60px;
+    width: 650px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, o, 0.2);
+
+}
+
+.modes-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.mode-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover,
+.mode-btn.active {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+.timer-display {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 4px;
+}
+
+.start-btn {
+    background: #ffffff;
+    color: #03461c;
+    border: none;
+    padding: 12px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s erse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.start-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-2px);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.Home-btn {
+    background: #ffffff;
+    color: #03461c;
+    border: none;
+    padding: 12px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s erse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Home-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-2px);
+}
+
+h2 {
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

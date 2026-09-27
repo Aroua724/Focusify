@@ -1,0 +1,213 @@
+/* إعدادات الصفحة العامة */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* تغيير الخلفية هنا إلى تدرج بنفسجي جذاب */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تصميم البطاقة الشفافة (Glassmorphism) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    /* جعل الشفافية أكثر وضوحاً قليلاً */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 25px;
+    width: 450px;
+    margin-top: 20px;
+}
+
+/* تنسيق العنوان */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tasks-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    /* لون النص أبيض ليتناسب مع الخلفية */
+}
+
+
+/* تصميم عنصر المهمة */
+.task-list {
+    margin-bottom: 15px;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.05);
+    /* خلفية داخلية خفيفة جداً */
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    /* جعل المهام المكتملة تبدو باهتة قليلاً */
+}
+
+/* أيقونة الإنجاز */
+.check-btn {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    /* إخفاء علامة الصح في الحالة العادية */
+    margin-right: 15px;
+    transition: all 0.2s ease;
+}
+
+.check-btn.checked {
+    background-color: #4caf50;
+    /* لون أخضر عند الإنجاز */
+    border-color: #4caf50;
+    color: white;
+}
+
+/* نص المهمة والعداد */
+.task-text {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: white;
+}
+
+.task-count {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 15px;
+}
+
+.task-options {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* زر إضافة مهمة جديدة */
+.add-task-btn {
+
+    width: 100%;
+    /* اجعليه يأخذ عرض البطاقة كاملاً */
+    max-width: 100%;
+    /* لضمان عدم خروجه عن الحواف */
+    box-sizing: border-box;
+    /* لكي يتم حساب الـ padding داخل العرض الإجمالي */
+    background: transparent;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    /* مسافة من العناصر التي فوقه */
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+
+}
+
+.add-task-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 60px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-continer {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(40, 30, 60, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    min-width: 110px;
+    padding: 5px 0;
+}
+
+.menu-continer.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: white;
+    display: block;
+}
+
+.dropdown-menu button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.delet-btn {
+    color: #ff6b6b !important
+}
+
+.Home-btn {
+    background: #ffffff;
+    color: #5d3084;
+    border: none;
+    padding: 12px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s erse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Home-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-2px);
+}

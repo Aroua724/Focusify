@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    /* خلفية بتدرج هادئ ودافئ بين البيج والسكري المريح للعين */
+    background: linear-gradient(135deg, #f5efe6 0%, #e8dfd8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.login-card h2 {
+    font-size: 22px;
+    color: #2c2c2c;
+    margin-bottom: 6px;
+}
+
+.login-card .brand {
+    /* لون دافئ متناسق مع الثيم لاسم التطبيق */
+    color: #b08968;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #7f7f7f;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d5c7bd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    direction: ltr;
+    background-color: #fcfbf9;
+}
+
+.input-group input:focus {
+    border-color: #b08968;
+    box-shadow: 0 0 5px rgba(176, 137, 104, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    /* زر بتصميم بني دافئ وراقي يتماشى مع البيج */
+    background: #b08968;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #967253;
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #7f7f7f;
+}
+
+.switch-text a {
+    color: #b08968;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}

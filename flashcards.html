@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="AROUA DJAHNIT">
+    <meta name="description"
+        content="a personal productivity and learning web app designed to boost focus, manage daily tasks, and master study sessions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flashcards</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../css/flashcards.css">
+    <h2>Flashcards</h2>
+    <div class="glass-card flashcard-container">
+        <div class="card-menu-container">
+            <button class="card-options-btn">⋮</button>
+            <div class="card-dropdown-menu">
+                <button class="edit-q-btn">Edit Question</button>
+                <button class="edit-a-btn">Edit Answer</button>
+                <button class="delete-card-btn">Delete Card</button>
+            </div>
+        </div>
+        <div class="card-flip-box" id="flashcard">
+            <div class="card-face card-front">
+                <span id="card-question">Click Next to start studying!</span>
+            </div>
+            <div class="card-face card-back">
+                <span id="card-answer">Answer will appear here</span>
+            </div>
+        </div>
+        <div class="flashcard-controls">
+            <button id="prev-btn" class="control-btn">Previous</button>
+            <button id="flip-btn" class="control-btn flip-highlight">Flip Card</button>
+            <button id="next-btn" class="control-btn">Next</button>
+        </div>
+        <button class="add-card-btn">+ Add New Card</button>
+        <a href="focucify.html" class="home-btn">Home</a>
+    </div>
+
+    <script src="../js/flashcards.js"></script>
+
+</body>
+
+</html>
