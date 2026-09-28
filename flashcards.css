@@ -1,4 +1,4 @@
-/* إعدادات الصفحة العامة بخلفية صفراء وتوسيط العناصر */
+
 body {
     margin: 0;
     padding: 20px;
@@ -11,8 +11,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* تنسيق العنوان الكبير */
 h2 {
     text-align: center;
     font-size: 60px;
@@ -24,12 +22,10 @@ h2 {
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* تنسيق زر Home داخل البطاقة الزجاجية من الأسفل */
 .home-btn {
     display: block;
     width: 100%;
     margin-top: 15px;
-    /* مسافة بينه وبين زر إضافة بطاقة */
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.5);
     color: #ffffff;
@@ -47,8 +43,6 @@ h2 {
     background: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
 }
-
-/* البطاقة الزجاجية الحاضنة في المنتصف */
 .glass-card {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
@@ -62,8 +56,6 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
-
-/* تصميم بطاقة الاستذكار القابلة للقلب */
 .card-flip-box {
     width: 100%;
     height: 180px;
@@ -96,8 +88,6 @@ h2 {
     display: none;
     color: #ffffff;
 }
-
-/* أزرار التحكم (السابق، قلب البطاقة، التالي) */
 .flashcard-controls {
     display: flex;
     justify-content: space-between;
@@ -125,8 +115,6 @@ h2 {
     border-color: rgba(46, 125, 50, 0.6);
     color: rgb(255, 255, 255);
 }
-
-/* زر إضافة بطاقة جديدة */
 .add-card-btn {
     width: 100%;
     background: transparent;
@@ -144,8 +132,6 @@ h2 {
     background: rgba(255, 255, 255, 0.2);
     border-color: #ffffff;
 }
-
-/* تنسيق قائمة النقاط الثلاث */
 .card-menu-container {
     position: relative;
     align-self: flex-end;
