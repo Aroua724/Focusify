@@ -1,5 +1,5 @@
 let timer;
-let totalSeconds = 25 * 60; // 25 دقيقة بالثواني
+let totalSeconds = 25 * 60; 
 let isRunning = false;
 
 const startbtn = document.querySelector('.start-btn');
@@ -20,7 +20,6 @@ startbtn.addEventListener('click', function () {
                     `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             } else {
                 clearInterval(timer);
-                // في مكان انتهاء الوقت لديكِ، قومي بإضافة هذا السطر:
                 playAlarmSound();
 
                 isRunning = false;
@@ -43,8 +42,6 @@ function playAlarmSound() {
         }
 
         const now = audioCtx.currentTime;
-
-        // دالة مساعدة لتوليد النغمة
         function createBeep(freq, delay, duration) {
             const osc = audioCtx.createOscillator();
             const gain = audioCtx.createGain();
@@ -61,8 +58,6 @@ function playAlarmSound() {
             osc.start(now + delay);
             osc.stop(now + delay + duration);
         }
-
-        // تشغيل نغمات التنبيه بتسلسل زمني صحيح
         createBeep(587.33, 0, 0.2);
         createBeep(880, 0.25, 0.3);
         createBeep(587.33, 0.6, 0.2);
