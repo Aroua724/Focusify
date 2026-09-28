@@ -1,10 +1,6 @@
 const addTaskBtn = document.querySelector('.add-task-btn');
 const taskList = document.querySelector('.task-list');
-
-// تفريغ القائمة عند بدء التشغيل لتكون فارغة تماماً
 taskList.innerHTML = '';
-
-// 1. إضافة مهمة جديدة
 addTaskBtn.addEventListener('click', () => {
     const taskTitle = prompt("Enter a new task:");
 
@@ -34,8 +30,6 @@ function escapeHtml(text) {
     const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
     return text.replace(/[&<>"']/g, m => map[m]);
 }
-
-// 2. ربط الأحداث لكل مهمة
 function attachTaskEvents(taskItem) {
     const checkBtn = taskItem.querySelector('.check-btn');
     const optionsBtn = taskItem.querySelector('.task-options');
@@ -43,26 +37,18 @@ function attachTaskEvents(taskItem) {
     const deleteBtn = taskItem.querySelector('.delete-btn');
     const menuContainer = taskItem.querySelector('.menu-container');
     const taskTextSpan = taskItem.querySelector('.task-text');
-
-    // زر الإنجاز
     checkBtn.addEventListener('click', () => {
         checkBtn.classList.toggle('checked');
         taskItem.classList.toggle('completed');
     });
-
-    // زر النقاط الثلاث لفتح/إغلاق القائمة المنسدلة
     optionsBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-
-        // إغلاق أي قوائم مفتوحة أخرى
         document.querySelectorAll('.menu-container').forEach(container => {
             if (container !== menuContainer) container.classList.remove('active');
         });
 
         menuContainer.classList.toggle('active');
     });
-
-    // زر التعديل (Edit)
     editBtn.addEventListener('click', () => {
         const currentText = taskTextSpan.textContent;
         const newText = prompt("Edit task:", currentText);
@@ -71,14 +57,10 @@ function attachTaskEvents(taskItem) {
         }
         menuContainer.classList.remove('active');
     });
-
-    // زر الحذف (Delete)
     deleteBtn.addEventListener('click', () => {
         taskItem.remove();
     });
 }
-
-// إغلاق القوائم عند النقر خارجها
 window.addEventListener('click', () => {
     document.querySelectorAll('.menu-container').forEach(container => {
         container.classList.remove('active');
