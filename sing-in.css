@@ -6,7 +6,6 @@
 }
 
 body {
-    /* خلفية بتدرج هادئ ودافئ بين البيج والسكري المريح للعين */
     background: linear-gradient(135deg, #f5efe6 0%, #e8dfd8 100%);
     min-height: 100vh;
     display: flex;
@@ -35,7 +34,6 @@ body {
 }
 
 .login-card .brand {
-    /* لون دافئ متناسق مع الثيم لاسم التطبيق */
     color: #b08968;
     font-weight: 700;
 }
@@ -79,7 +77,6 @@ body {
 .btn-submit {
     width: 100%;
     padding: 12px;
-    /* زر بتصميم بني دافئ وراقي يتماشى مع البيج */
     background: #b08968;
     color: white;
     border: none;
