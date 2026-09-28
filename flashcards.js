@@ -57,9 +57,6 @@ addCardBtn.addEventListener('click', () => {
 });
 
 displayCard();
-// --- تفعيل قائمة النقاط الثلاث وإصلاح قلب البطاقة ---
-
-// عناصر قائمة النقاط الثلاث
 const menuContainer = document.querySelector('.card-menu-container');
 const optionsBtn = document.querySelector('.card-options-btn');
 const editQBtn = document.querySelector('.edit-q-btn');
@@ -100,7 +97,7 @@ function flipCard() {
     }
 }
 
-// التحكم في إظهار وإخفاء القائمة عند النقر على النقاط الثلاث
+
 if (optionsBtn) {
     optionsBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -108,14 +105,11 @@ if (optionsBtn) {
     });
 }
 
-// إغلاق القائمة عند النقر في أي مكان خارجها
 window.addEventListener('click', () => {
     if (menuContainer) {
         menuContainer.classList.remove('active');
     }
 });
-
-// زر تعديل السؤال
 if (editQBtn) {
     editQBtn.addEventListener('click', () => {
         if (flashcards.length === 0) return;
@@ -127,7 +121,7 @@ if (editQBtn) {
     });
 }
 
-// زر تعديل الإجابة
+
 if (editABtn) {
     editABtn.addEventListener('click', () => {
         if (flashcards.length === 0) return;
@@ -138,8 +132,6 @@ if (editABtn) {
         }
     });
 }
-
-// زر مسح البطاقة (Delete)
 if (deleteCardBtn) {
     deleteCardBtn.addEventListener('click', () => {
         if (flashcards.length === 0) return;
